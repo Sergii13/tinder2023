@@ -1,0 +1,154 @@
+.tinder {
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  // .tinder__slider
+  &__slider {
+    height: 100%;
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  // .tinder__wrapper
+  &__wrapper {
+    height: 100%;
+    flex: 1 1 auto;
+  }
+  // .tinder__slide
+  &__slide {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: rem(400);
+  }
+  // .tinder__bg-ibg
+  &__bg-ibg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    &::after {
+      content: '';
+      bottom: -200px;
+      left: 0;
+      height: 532px;
+      background: linear-gradient(
+        360deg,
+        #000000 26.39%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      position: absolute;
+      width: 100%;
+    }
+  }
+  // .tinder__content
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+  }
+  // .tinder__head
+  &__head {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+  // .tinder__title
+  &__title {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: math.div(61, 45);
+    color: #ffffff;
+    img {
+      max-width: rem(34);
+    }
+    span {
+      font-weight: 400;
+      margin-left: rem(5);
+    }
+  }
+  // .tinder__tags
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(7);
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+    a {
+      height: 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem(2) rem(15);
+      background: rgba(217, 217, 217, 0.5);
+      border-radius: 78.0328px;
+      font-weight: 600;
+      font-size: 12.4852px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+  }
+  // .tinder__buttons
+  &__buttons {
+    display: grid;
+    gap: rem(8);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  // .tinder__button
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: rem(5) rem(20);
+    border-radius: 78.0328px;
+    &:nth-child(1) {
+      background: #51adec;
+      img {
+        max-width: rem(88);
+      }
+    }
+    &:nth-child(2) {
+      background: radial-gradient(
+          407.51% 247.59% at -16.69% 161.77%,
+          #fed576 0%,
+          #f47133 26.3%,
+          #bc3081 60.9%,
+          #4c63d2 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    }
+  }
+  // .tinder__pagination
+  &__pagination {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(2);
+    top: 10px;
+    width: 100%;
+    z-index: 2;
+    .swiper-pagination-bullet {
+      height: 3px;
+      width: 37px;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 100px;
+      cursor: pointer;
+      &.swiper-pagination-bullet-active {
+        background: #ffffff;
+        height: 5px;
+      }
+    }
+  }
+}
