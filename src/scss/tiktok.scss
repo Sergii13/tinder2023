@@ -1,0 +1,114 @@
+.tiktok {
+  position: relative;
+  flex: 1 1 auto;
+  padding: rem(14) rem(17);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  // .tiktok__bg-video
+  &__bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    video,
+    iframe,
+    object,
+    embed {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+    }
+  }
+  // .tiktok__logo
+  &__logo {
+    display: flex;
+    justify-content: center;
+  }
+  // .tiktok__navigation
+  &__navigation {
+    position: absolute;
+    top: 102px;
+    right: 17px;
+    img {
+      max-width: rem(52);
+    }
+  }
+  // .tiktok__content
+  &__content {
+  }
+  // .tiktok__title
+  &__title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+  // .tiktok__subtitle
+  &__subtitle {
+    font-weight: 600;
+    font-size: 12.4852px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #ffffff;
+
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: rem(13);
+    }
+  }
+  // .tiktok__buttons
+  &__buttons {
+    display: grid;
+    gap: rem(8);
+    grid-template-columns: repeat(2, 1fr);
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+  // .tiktok__button
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: rem(5) rem(20);
+    height: 40px;
+    &:nth-child(1) {
+      background: #51adec;
+      img {
+        max-width: rem(88);
+      }
+    }
+    &:nth-child(2) {
+      background: radial-gradient(
+        407.51% 247.59% at -16.69% 161.77%,
+        #fed576 0%,
+        #f47133 26.3%,
+        #bc3081 60.9%,
+        #4c63d2 100%
+      );
+    }
+  }
+  // .tiktok__name
+  &__name {
+    font-weight: 600;
+    font-size: 12.4852px;
+    line-height: 17px;
+
+    color: #ffffff;
+  }
+}

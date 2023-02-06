@@ -49,3 +49,31 @@
 }
 
 //====================================================================================================
+.footer2 {
+  background: #000000;
+  padding: rem(20) 0;
+  // .footer2__container
+  &__container {
+  }
+  // .footer2__row
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .footer2__link
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 11px;
+    color: #ffffff;
+    img {
+      height: rem(20);
+    }
+  }
+}
+.big {
+}
