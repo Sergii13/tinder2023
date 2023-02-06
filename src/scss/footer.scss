@@ -69,7 +69,13 @@
     font-weight: 600;
     font-size: 8px;
     line-height: 11px;
+    gap: rem(4);
     color: #ffffff;
+    &:nth-child(2) {
+      img {
+        height: rem(14);
+      }
+    }
     img {
       height: rem(20);
     }
